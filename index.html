@@ -1,105 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Culture Générale</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Menu de démarrage -->
-    <div class="menu-container" id="menu">
-      <h1>Quiz Culture Générale</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz Culture Générale</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- Menu de démarrage -->
+		<div class="menu-container" id="menu">
+			<h1>Quiz Culture Générale</h1>
 
-      <div class="menu-content">
-        <div class="welcome-text">
-          <p>Testez vos connaissances avec notre quiz interactif !</p>
-          <p>Choisissez votre niveau de difficulté et commencez l'aventure.</p>
-        </div>
+			<div class="menu-content">
+				<div class="welcome-text">
+					<p>Testez vos connaissances avec notre quiz interactif !</p>
+					<p>Choisissez votre niveau de difficulté et commencez l'aventure.</p>
+				</div>
 
-        <div class="difficulty-selection">
-          <h3>Choisissez votre difficulté</h3>
-          <div class="difficulty-options">
-            <button class="difficulty-btn" data-difficulty="Easy">
-              <div class="difficulty-icon">🌱</div>
-              <div class="difficulty-info">
-                <h4>Facile</h4>
-                <p>Basiques, parfait pour commencer, 3 Questions</p>
-                <span class="difficulty-badge easy">★☆☆</span>
-              </div>
-            </button>
+				<div class="difficulty-selection">
+					<h3>Choisissez votre difficulté</h3>
+					<div class="difficulty-options">
+						<button class="difficulty-btn" data-difficulty="Easy">
+							<div class="difficulty-icon">🌱</div>
+							<div class="difficulty-info">
+								<h4>Facile</h4>
+								<p>Basiques, parfait pour commencer, 3 Questions</p>
+								<span class="difficulty-badge easy">★☆☆</span>
+							</div>
+						</button>
 
-            <button class="difficulty-btn" data-difficulty="Medium">
-              <div class="difficulty-icon">🔥</div>
-              <div class="difficulty-info">
-                <h4>Moyen</h4>
-                <p>
-                  Un défi équilibré pour tester vos connaissances, 7 questions.
-                </p>
-                <span class="difficulty-badge medium">★★☆</span>
-              </div>
-            </button>
+						<button class="difficulty-btn" data-difficulty="Medium">
+							<div class="difficulty-icon">🔥</div>
+							<div class="difficulty-info">
+								<h4>Moyen</h4>
+								<p>
+									Un défi équilibré pour tester vos connaissances, 7 questions.
+								</p>
+								<span class="difficulty-badge medium">★★☆</span>
+							</div>
+						</button>
 
-            <button class="difficulty-btn" data-difficulty="Hard">
-              <div class="difficulty-icon">💎</div>
-              <div class="difficulty-info">
-                <h4>Difficile</h4>
-                <p>Pour les experts en culture générale, 10 questions</p>
-                <span class="difficulty-badge hard">★★★</span>
-              </div>
-            </button>
-          </div>
-        </div>
+						<button class="difficulty-btn" data-difficulty="Hard">
+							<div class="difficulty-icon">💎</div>
+							<div class="difficulty-info">
+								<h4>Difficile</h4>
+								<p>Pour les experts en culture générale, 10 questions</p>
+								<span class="difficulty-badge hard">★★★</span>
+							</div>
+						</button>
+					</div>
+				</div>
 
-        <button class="start-btn" id="startQuiz">
-          <span>Commencer le Quiz</span>
-          <div class="start-arrow">→</div>
-        </button>
-      </div>
-    </div>
+				<button class="start-btn" id="startQuiz">
+					<span>Commencer le Quiz</span>
+					<div class="start-arrow">→</div>
+				</button>
+			</div>
+		</div>
 
-    <div class="quiz-container" id="quizContainer" style="display: none">
-      <div class="quiz-header">
-        <div class="score-display">Score: 0/0</div>
-        <div class="difficulty-display" id="difficultyDisplay">
-          <span class="difficulty-label">Difficulté:</span>
-          <span class="difficulty-value">Facile</span>
-        </div>
-      </div>
+		<div class="quiz-container" id="quizContainer" style="display: none">
+			<div class="quiz-header">
+				<div class="score-display">Score: 0/0</div>
+				<div class="difficulty-display" id="difficultyDisplay">
+					<span class="difficulty-label">Difficulté:</span>
+					<span class="difficulty-value">Facile</span>
+				</div>
+			</div>
 
-      <h1>Quiz Culture Générale</h1>
+			<h1>Quiz Culture Générale</h1>
 
-      <div class="progress-container">
-        <div class="progress-bar"></div>
-      </div>
+			<div class="progress-container">
+				<progress id="progress" value="0" max="10"></progress>
+			</div>
 
-      <div id="question">Chargement de la question...</div>
+			<div id="question">Chargement de la question...</div>
 
-      <div id="answers">
-        <button class="answer-btn" data-answer="0">
-          <span class="answer-letter">A</span>
-          <span class="answer-text">Première réponse possible</span>
-        </button>
+			<div id="answers">
+				<button class="answer-btn" data-answer="0">
+					<span class="answer-letter">A</span>
+					<span class="answer-text">Chargement Questions...</span>
+				</button>
 
-        <button class="answer-btn" data-answer="1">
-          <span class="answer-letter">B</span>
-          <span class="answer-text">Deuxième réponse possible</span>
-        </button>
+				<button class="answer-btn" data-answer="1">
+					<span class="answer-letter">B</span>
+					<span class="answer-text">Chargement Questions...</span>
+				</button>
 
-        <button class="answer-btn" data-answer="2">
-          <span class="answer-letter">C</span>
-          <span class="answer-text">Troisième réponse possible</span>
-        </button>
+				<button class="answer-btn" data-answer="2">
+					<span class="answer-letter">C</span>
+					<span class="answer-text">Chargement Questions</span>
+				</button>
 
-        <button class="answer-btn" data-answer="3">
-          <span class="answer-letter">D</span>
-          <span class="answer-text">Quatrième réponse possible</span>
-        </button>
-      </div>
+				<button class="answer-btn" data-answer="3">
+					<span class="answer-letter">D</span>
+					<span class="answer-text">Chargement Questions</span>
+				</button>
+			</div>
 
-      <p id="feedback"></p>
-      <button id="next">Suivant</button>
-    </div>
-    <script src="./script.js"></script>
-  </body>
+			<p id="feedback"></p>
+			<button id="next">Suivant</button>
+		</div>
+		<script src="./script.js"></script>
+	</body>
 </html>
